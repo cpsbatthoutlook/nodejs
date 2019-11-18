@@ -1,0 +1,22 @@
+{
+    "name": "app",
+    "version": "0.0.1",
+    "dependencies": {
+      "express": "^4.10.6",
+      "mysql": "^2.5.4"
+    }
+  }
+  
+
+//   REPOSITORY                TAG                 IMAGE ID            CREATED             SIZE
+//   mysql1_run_dbcopy         latest              0d7463761711        12 days ago         350MB
+//   node                      8.16-alpine         1b4893698c9f        2 weeks ago         66.9MB
+//   mysql                     5.6                 b3983abaa3fe        4 weeks ago         302MB
+//   centos/httpd-24-centos7   latest              ae8f40bfd794        5 weeks ago         365MB
+//   7c1258346be5        mysql:5.6           "docker-entrypoint.s…"   About an hour ago   Up About an hour    3306/tcp            mysql5
+//   cd84ceebb793        node:8.16-alpine    "docker-entrypoint.s…"   About an hour ago   Up About an hour                        node
+//   https://hub.docker.com/_/mysql?ref=login&tab=description
+//   docker run --name mysql5 -e MYSQL_ROOT_PASSWORD=running -d mysql
+//     docker run -it --rm mysql5 mysql -hmysql -uroot -p   
+
+  
