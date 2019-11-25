@@ -1,4 +1,4 @@
-<% include partials/_header %>
+<% include partials/_pk_header %>
 
 <div class="container mt-5">
     <div class="row">
@@ -6,15 +6,15 @@
             <div class="card-body">
                 <form action="/update/<%= data.id %>" method="POST">
                     <div class="form-group">
-                        <input type="text" name="name" value="<%= data.name %>" placeholder="Name" class="form-control"
+                        <input type="text" name="Catagory" value="<%= data.Catagory %>" placeholder="Name" class="form-control"
                                autofocus>
                     </div>
                     <div class="form-group">
-                        <input type="text" name="address" value="<%= data.address %>" placeholder="Address"
+                        <input type="text" name="Details" value="<%= data.Details %>" placeholder="Address"
                                class="form-control">
                     </div>
                     <div class="form-group">
-                        <input type="text" name="phone" value="<%= data.phone %>" placeholder="Phone"
+                        <input type="text" name="Url" value="<%= data.Url %>" placeholder="Phone"
                                class="form-control">
                     </div>
 
@@ -27,4 +27,4 @@
     </div>
 </div>
 
-<% include partials/_footer %>
+<% include partials/_pk_footer %>

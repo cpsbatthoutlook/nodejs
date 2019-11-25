@@ -1,4 +1,4 @@
-<% include partials/_pks_header %>
+<% include partials/_pk_header %>
 
 <div class="container mt-5">
     <div class="row">
@@ -30,27 +30,8 @@
                 </tbody>
             </table>
         </div>
-        <div class="col-md-5">
-            <div class="card-body">
-
-                <form action="/add" method="POST">
-                    <div class="form-group">
-                        <input type="text" name="name" placeholder="Name" class="form-control" autofocus>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" name="address" placeholder="Address" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <input type="text" name="phone" placeholder="Phone" class="form-control">
-                    </div>
-
-                    <button type="submit" class="btn btn-primary">
-                        save customer
-                    </button>
-                </form>
-            </div>
-        </div>
+        
     </div>
 </div>
 
-<% include partials/_pks_footer %>
+<% include partials/_pk_footer %>
