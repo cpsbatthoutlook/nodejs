@@ -2,7 +2,7 @@ const controller = {};
 
 controller.list = (req, res) => {
     req.getConnection((err, conn) => {
-        conn.query('SELECT * FROM customer', (err, customers) => {
+        conn.query('SELECT * FROM bookmarks', (err, customers) => {
             if (err) {
                 res.json(err);
             }
@@ -27,7 +27,7 @@ controller.save = (req, res) => {
 controller.edit = (req, res) => {
     const {id} = req.params;
     req.getConnection((err, conn) => {
-        conn.query("SELECT * FROM customer WHERE id = ?", [id], (err, rows) => {
+        conn.query("SELECT * FROM bookmarks WHERE id = ?", [id], (err, rows) => {
             res.render('customers_edit', {
                 data: rows[0]
             })
@@ -49,7 +49,7 @@ controller.update = (req, res) => {
 controller.delete = (req, res) => {
     const {id} = req.params;
     req.getConnection((err, connection) => {
-        connection.query('DELETE FROM customer WHERE id = ?', [id], (err, rows) => {
+        connection.query('DELETE FROM bookmarks WHERE id = ?', [id], (err, rows) => {
             res.redirect('/');
         });
     });
