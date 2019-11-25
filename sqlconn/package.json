@@ -3,7 +3,11 @@
     "version": "0.0.1",
     "dependencies": {
       "express": "^4.10.6",
-      "mysql": "^2.5.4"
+      "mysql": "^2.5.4",
+      "ejs": "^2.6.1",
+      "express-myconnection": "^1.0.4",
+      "morgan": "^1.9.1",
+ 
     }
   }
   
@@ -18,5 +22,7 @@
 //   https://hub.docker.com/_/mysql?ref=login&tab=description
 //   docker run --name mysql5 -e MYSQL_ROOT_PASSWORD=running -d mysql
 //     docker run -it --rm mysql5 mysql -hmysql -uroot -p   
+//     docker run -it -d -p 3000:3000 -p4000:4000 --name node node:8.16-alpine
+
 
   
