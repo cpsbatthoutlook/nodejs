@@ -49,7 +49,8 @@ controller.update = (req, res) => {
     req.getConnection((err, conn) => {
         // UPDATE bookmarks SET Catagory = 'SysAdmin' , Details = 'Sys-con1' , Url = 'http://www.sys-con.com/' WHERE ID='100225'
         // conn.query('UPDATE bookmarks set ? where id = ?', [newCustomer, id], (err, rows) => {
-        conn.query('UPDATE bookmarks set Category = ?, Details = ?, Url = ? where id = ?', [newCustomer, id], (err, rows) => {
+        // conn.query('UPDATE bookmarks SET Catagory = ?, Details = ?, Url = ? WHERE id = ?', [newCustomer, id], (err, rows) => {
+        conn.query('UPDATE bookmarks SET  ?  WHERE id = ?', [newCustomer, id], (err, rows) => {
             if (err) {
                 console.log(req.body);
                 res.json(err);
