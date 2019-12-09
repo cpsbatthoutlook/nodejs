@@ -1,26 +1,11 @@
 {
-  "name": "nodejs-mysql-crud",
-  "version": "1.0.0",
-  "description": "NodeJS MySQL CRUD",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/hendisantika/nodejs-mysql-crud.git"
-  },
-  "keywords": [
-    "nodejs",
-    "express",
-    "mysql",
-    "crud"
-  ],
+  "name": "nodejs-mysql-crud",  "version": "1.0.0",  "description": "NodeJS MySQL CRUD",  "main": "index.js",
+  "scripts": {    "test": "echo \"Error: no test specified\" && exit 1"  },
+  "repository": {"type": "git","url": "git+https://github.com/hendisantika/nodejs-mysql-crud.git"  },
+  "keywords": [    "nodejs",    "express",    "mysql",    "crud"  ],
   "author": "Hendi Santika",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/hendisantika/nodejs-mysql-crud/issues"
-  },
+  "bugs": {    "url": "https://github.com/hendisantika/nodejs-mysql-crud/issues"  },
   "homepage": "https://github.com/hendisantika/nodejs-mysql-crud#readme",
   "dependencies": {
     "ejs": "^2.6.1",
@@ -30,3 +15,11 @@
     "mysql": "^2.16.0"
   }
 }
+
+// docker run -it -d -p 3000:3000 -p4000:4000 -v /git/nodejs/nodejs-mysql-crud:/app --name node node:8.16-alpine
+// REPOSITORY                TAG                 IMAGE ID            CREATED             SIZE
+// mysqlchannicopy           1                   acc9f5e27b3b        12 minutes ago      302MB
+// node                      8.16-alpine         1b4893698c9f        3 weeks ago         66.9MB
+// mysql                     5.6                 b3983abaa3fe        5 weeks ago         302MB
+// centos/httpd-24-centos7   latest              ae8f40bfd794        6 weeks ago         365MB
+
