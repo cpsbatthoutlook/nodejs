@@ -1,0 +1,28 @@
+<!--   // +-------------+--------------+------+-----+-------------------+-----------------------------+
+// | Field       | Type         | Null | Key | Default           | Extra                       |
+// +-------------+--------------+------+-----+-------------------+-----------------------------+
+// | ID          | int(11)      | NO   | MUL | NULL              | auto_increment              |
+// | Category    | varchar(30)  | NO   |     |                   |                             |
+// | Subcategory | varchar(30)  | NO   |     |                   |                             |
+// | Subject     | varchar(100) | YES  |     | NULL              |                             |
+// | Description | text         | NO   |     | NULL              |                             |
+// | InsertTime  | timestamp    | NO   |     | CURRENT_TIMESTAMP | on update CURRENT_TIMESTAMP |
+// +-------------+--------------+------+-----+-------------------+-----------------------------+
+-->
+
+<% include partials/_pk_header %>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-5 offset-md-3 card">
+            <div class="card-body">
+
+<tr>
+    <td><%= data.ID %></td> <td><%= data.Category%></td> <td><%= data.Subcategory%></td>
+    <td> <a href="/Know" class="btn btn-info">Back</a> </td>
+    <td> <a href="/Know/update/<%= data.ID %>" class="btn btn-info">Edit</a> </td>
+    <td> <a href="/Know/delete/<%= data.ID %>" class="btn btn-danger">Delete</a> </td>
+</tr>
+<h1><%= data.Subject%></h1> <pre> <%= data.Description%> </pre>
+           </div> </div> </div> </div>
+
+<% include partials/_pk_footer %>

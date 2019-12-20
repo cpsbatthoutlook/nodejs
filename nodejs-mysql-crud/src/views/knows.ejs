@@ -1,0 +1,42 @@
+<% include partials/_pk_header %>
+
+<!--   // +-------------+--------------+------+-----+-------------------+-----------------------------+
+// | Field       | Type         | Null | Key | Default           | Extra                       |
+// +-------------+--------------+------+-----+-------------------+-----------------------------+
+// | ID          | int(11)      | NO   | MUL | NULL              | auto_increment              |
+// | Category    | varchar(30)  | NO   |     |                   |                             |
+// | Subcategory | varchar(30)  | NO   |     |                   |                             |
+// | Subject     | varchar(100) | YES  |     | NULL              |                             |
+// | Description | text         | NO   |     | NULL              |                             |
+// | InsertTime  | timestamp    | NO   |     | CURRENT_TIMESTAMP | on update CURRENT_TIMESTAMP |
+// +-------------+--------------+------+-----+-------------------+-----------------------------+
+-->
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-7">
+            <table class="table table-bordered table-hover">
+                <thead><tr><td>#</td> <td>Category</td>  <td>Details</td>   <td> Urls</td><td> </td></tr></thead>
+                <tbody>
+                <% if (data) { %>
+                    <% for(var i = 0; i < data.length; i++) { %>
+                        <tr>
+                            <td><%= data[i].ID %></td>
+                            <td><%= data[i].Category%></td>
+                            <td><%= data[i].Subcategory%></td>
+   <td> <a href="/Know/view/<%= data[i].ID %>" > <%= data[i].Subject%></a>
+       
+    </td>
+   <td> <a href="/Know/edit/<%= data[i].ID %>" class="btn btn-info">Edit</a> </td>
+   <td> <a href="/Know/delete/<%= data[i].ID %>" class="btn btn-danger">Delete</a> </td>
+</tr>
+                    <% } %>
+                <% } %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<% include partials/_pk_footer %>
+

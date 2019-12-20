@@ -1,13 +1,11 @@
-const express = require('express'),
-    path = require('path'),
-    morgan = require('morgan'),
-    mysql = require('mysql'),
-    myConnection = require('express-myconnection');
+const express = require('express'), path = require('path'), morgan = require('morgan'),
+    mysql = require('mysql'), myConnection = require('express-myconnection');
 
 const app = express();
 
 // importing routes
 const customerRoutes = require('./routes/customer');
+const knowRoutes = require('./routes/know');
 
 // settings
 app.set('port', process.env.PORT || 3000);
@@ -26,7 +24,9 @@ app.use(myConnection(mysql, {
 app.use(express.urlencoded({extended: false}));
 
 // routes
-app.use('/', customerRoutes);
+// app.use('/', customerRoutes);
+app.use('/bookmarks', customerRoutes);
+app.use('/Know', knowRoutes);
 
 // static files
 app.use(express.static(path.join(__dirname, 'public')));

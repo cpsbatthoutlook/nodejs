@@ -1,22 +1,19 @@
-<% include partials/_pks_header %>
+<% include partials/_pk_header %>
 
 <div class="container mt-5">
     <div class="row">
         <div class="col-md-7">
             <table class="table table-bordered table-hover">
-                <thead><tr><td>#</td> <td>Category</td>  <td>Details</td>   <td> Urls </td></tr></thead>
+                <thead><tr><td>#</td> <td>Category</td>  <td>Details</td>   <td> Urls</td><td> </td></tr></thead>
                 <tbody>
                 <% if (data) { %>
                     <% for(var i = 0; i < data.length; i++) { %>
                         <tr>
                             <td><%= data[i].ID %></td>
                             <td><%= data[i].Catagory%></td>
-                            <td><%= data[i].Details %></td>
-                            <td><%= data[i].Url %></td>
-                            <td>
-                                <a href="/update/<%= data[i].ID %>" class="btn btn-info">Edit</a>
-                                <a href="/delete/<%= data[i].ID %>" class="btn btn-danger">Delete</a>
-                            </td>
+                            <td> <a href="<%= data[i].Url %>" > <%= data[i].Details %> </a>  </td>
+                            <td> <a href="/bookmarks/update/<%= data[i].ID %>" class="btn btn-info">Edit</a> </td>
+                            <td> <a href="/bookmarks/delete/<%= data[i].ID %>" class="btn btn-danger">Delete</a> </td>
                         </tr>
                     <% } %>
                 <% } %>
@@ -26,4 +23,5 @@
     </div>
 </div>
 
-<% include partials/_pks_footer %>
+<% include partials/_pk_footer %>
+

@@ -38,7 +38,7 @@ controller.save = (req, res) => {
         // const query = connection.query('INSERT INTO customer set ?', data, (err, customer) => {
         conn.query('INSERT INTO bookmarks set ?', [newCustomer], (err, rows) => {    
             console.log(newCustomer);
-            res.redirect('/');
+            res.redirect('/bookmarks');
         })
     })
 };
@@ -55,7 +55,7 @@ controller.update = (req, res) => {
                 console.log(req.body);
                 res.json(err);
             }
-            res.redirect('/');
+            res.redirect('/bookmarks');
         });
     });
 };
@@ -64,7 +64,7 @@ controller.delete = (req, res) => {
     const {id} = req.params;
     req.getConnection((err, connection) => {
         connection.query('DELETE FROM bookmarks WHERE id = ?', [id], (err, rows) => {
-            res.redirect('/');
+            res.redirect('/bookmarks');
         });
     });
 };

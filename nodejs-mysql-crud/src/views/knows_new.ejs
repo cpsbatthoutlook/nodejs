@@ -1,0 +1,30 @@
+<% include partials/_pk_header %>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-5 offset-md-3 card">
+            <div class="card-body">
+                <form method="post" action="/Know/Add" enctype="multipart/form-data">
+                    <h3>Adding new record</h3>
+                    <hr />
+                    Category<select name="Category">
+                        <option value="Apache">Apache</option>
+                        <option value="Cgi">Cgi</option>
+                        <option value="Word">Word</option>
+                    </select>
+                    Subcategory<select name="Subcategory">
+                        <option value="Administration">Administration</option>
+                        <option selected="selected" value="Commands">Commands</option>
+                    </select>
+
+                    <br /><br />
+                    Subject <input type=text name=Subject maxlength=100 size=100
+                        value="Please enter subject"><br /><br />
+                    Description <br /><textarea name=Description rows=30 cols=90> Brief Desription </textarea><br />
+                    <input type="hidden" name="ID" value="" />
+                    <button type="submit" class="btn btn-primary"> save record </button>
+                    </form>
+            </div>
+        </div>
+    </div>
+</div>
+<% include partials/_pk_footer %>
