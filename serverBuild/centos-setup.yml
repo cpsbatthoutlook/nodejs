@@ -1,0 +1,20 @@
+---
+#ansible-playbook centos.yaml
+- hosts: all
+  tasks:
+  - name: Install a list of packages
+    yum:
+      name:
+        - screen
+        - ansible
+        - git
+        - docker
+        - sysstat
+        - tcpdump
+      state: present
+
+  - name: upgrade all packages
+    yum:
+      name: '*'
+      state: latest
+
