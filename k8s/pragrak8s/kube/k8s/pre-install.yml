@@ -1,0 +1,30 @@
+---
+- name:  Install packages
+  hosts: all
+  tasks:
+   - name : Start basic 
+     shell: "apt-get -y update && apt-get install -y apt-transport-https screen sysstat tcpdump curl wget"
+   - name : packages
+     apt: name={{ item }}  state=absent
+     with_items:
+       - docker.io
+       - kubelet
+       - kubeadm
+       - kubectl
+   - name : packages
+     apt: name={{ item }}  state=present
+     with_items:
+       - docker.io
+       - kubelet
+       - kubeadm
+       - kubectl
+       - ntp
+       - curl 
+       - wget 
+       - sysstat
+       - tcpdump
+   - name : enableva
+     service: name=docker enabled=yes state=started
+...
+
+

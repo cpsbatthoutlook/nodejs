@@ -1,0 +1,45 @@
+#https://wiki.centos.org/HowTos/Virtualization/VirtualBox
+cd /etc/yum.repos.d && wget http://download.virtualbox.org/virtualbox/rpm/rhel/virtualbox.repo
+#yum --enablerepo=epel install dkms
+yum -y groupinstall "Development Tools"
+yum -y install kernel-devel wget
+reboot
+#yum -y --enablerepo-virtualbox Virtualbox-6.1
+wget https://download.virtualbox.org/virtualbox/6.1.2/VirtualBox-6.1-6.1.2_135662_el7-1.x86_64.rpm
+cd /tmp
+yum -y localinstall VirtualBox-6.1-6.1.2_135662_el7-1.x86_64.rpm
+usermod -a -G vboxusers username
+
+
+##Vagrant ##  https://phoenixnap.com/kb/how-to-install-vagrant-on-centos-7
+yum -y install epel-release
+yum -y install gcc dkms make qt libgomp patch
+yum -y install kernel-headers kernel-devel binutils glibc-headers glibc-devel font-forge
+cd /tmp && wget https://releases.hashicorp.com/vagrant/2.2.7/vagrant_2.2.7_x86_64.rpm
+yum -y localinstall vagrant_2.2.7_x86_64.rpm
+
+[cbatth@mastercentos ~]$ ls -l
+total 4
+-rw-rw-r--. 1 cbatth cbatth 899 Feb  3 12:57 VBoxInstall.txt
+[cbatth@mastercentos ~]$ mv VBoxInstall.txt VBoxVagrantInstall.txt
+[cbatth@mastercentos ~]$ cat VBoxVagrantInstall.txt
+https://wiki.centos.org/HowTos/Virtualization/VirtualBox
+cd /etc/yum.repos.d && wget http://download.virtualbox.org/virtualbox/rpm/rhel/virtualbox.repo
+#yum --enablerepo=epel install dkms
+yum -y groupinstall "Development Tools"
+yum -y install kernel-devel wget
+reboot
+#yum -y --enablerepo-virtualbox Virtualbox-6.1
+wget https://download.virtualbox.org/virtualbox/6.1.2/VirtualBox-6.1-6.1.2_135662_el7-1.x86_64.rpm
+cd /tmp
+yum -y localinstall VirtualBox-6.1-6.1.2_135662_el7-1.x86_64.rpm
+usermod -a -G vboxusers username
+
+
+##Vagrant ##  https://phoenixnap.com/kb/how-to-install-vagrant-on-centos-7
+yum -y install epel-release
+yum -y install gcc dkms make qt libgomp patch
+yum -y install kernel-headers kernel-devel binutils glibc-headers glibc-devel font-forge
+cd /tmp && wget https://releases.hashicorp.com/vagrant/2.2.7/vagrant_2.2.7_x86_64.rpm
+yum -y localinstall vagrant_2.2.7_x86_64.rpm
+

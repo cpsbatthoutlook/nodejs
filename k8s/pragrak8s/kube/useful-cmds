@@ -1,0 +1,42 @@
+# https://kubernetes.io/docs/reference/kubectl/cheatsheet/#deleting-resources
+kubectl delete pods,services -n NS --all
+
+#Docker vs kubectl  https://kubernetes.io/docs/reference/kubectl/docker-cli-to-kubectl/
+ No difference... refer to kube\tut\dockerhostedApp
+
+##Troubleshooting
+kc get events [-n chander]
+
+
+##Reset Kubeadm  .. https://github.com/kubernetes/kubernetes/issues/39557
+kubeadm reset -f
+rm -rf /var/lib/cni /etc/cni
+rm -rf /var/lib/kubelet ~/.kube
+systemctl stop kubelet
+systemctl stop docker
+ifconfig cni0 down
+ifconfig flannel.1 down
+ifconfig docker0 down
+ip link delete cni0
+ip link delete flannel.1
+
+#replicset 
+#kc scale deploy my-nginx --replicas=0
+OR
+#kc edit deploy chander -n chander
+
+kc run curl --image=radial/busyboxplus:curl -i --tty  #run single instance of image
+
+
+##Wierd and interesting ##
+ curl -i  --connect-timeout 5 localhost:10249/proxyMode  #output iptables
+
+##Administration
+kc drain node2    #drain to prepare
+kc cordon node2   #take if off
+kc uncordon node2 #revive
+
+
+##short-cuts 
+kc completion bash >> ~/.bashrc
+echo "alias kc=kubectl" >> ~/.bashrc
