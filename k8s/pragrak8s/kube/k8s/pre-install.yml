@@ -19,10 +19,14 @@
        - kubeadm
        - kubectl
        - ntp
+       - iptables
+       - arptables
+       - ebtables
        - curl 
        - wget 
        - sysstat
        - tcpdump
+       - bash-completion
    - name : enableva
      service: name=docker enabled=yes state=started
 ...

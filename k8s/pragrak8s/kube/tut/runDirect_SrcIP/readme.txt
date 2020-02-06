@@ -8,6 +8,7 @@ kubectl run ${s} --image=k8s.gcr.io/echoserver:1.4 -n chander
 #Run Service as ClusterIP (default)
 kubectl expose deploy $s -n chander --name=clusterip --port=80 --target-port=8080  
 
+#Test curl -i --connect-timeout 5 localhost:8080
 
 #Run same service as nodeport
 kc expose deploy $s -n chander --name=nodeport --port=80 --target-port=8080 --type=NodePort
