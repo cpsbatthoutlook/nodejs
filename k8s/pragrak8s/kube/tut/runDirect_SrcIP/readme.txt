@@ -22,3 +22,19 @@ kc expose deploy $s -n chander --name=lb --port=80 --target-port=8080 --type=Loa
  patch -p '{"spec":{"externalTrafficPolicy":"Local"}}'  service/nodeport -n chander
 
 ??? inGRESS Controller ??
+
+
+
+###  ###  ###
+Typical usages are as follows. To launch Ghost serving on port 2368 and create a service along with it, enter:
+$ kubectl run ghost --image=ghost:0.9 --port=2368 --expose
+
+To launch MySQL with the root password set, enter:
+$ kubectl run mysql --image=mysql:5.5 --env=MYSQL_ROOT_PASSWORD=root
+
+To launch a busybox container and execute the command sleep 3600 on start, enter:
+$ kubectl run myshell --image=busybox --command -- sh -c "sleep 3600"
+
+
+
+

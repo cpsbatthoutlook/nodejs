@@ -33,6 +33,9 @@
   cd /tmp && wget https://raw.githubusercontent.com/coreos/flannel/2140ac876ef134e0ed5af15c65e414cf26827915/Documentation/kube-flannel.yml
   kubectl apply -f kube-flannel.yml
 
+##Weave
+kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n')"
+
   ##Join cluster
   ansible nodes -m script -a "/tmp/join.sh executable:/bin/bash"
   ansible all -m service -a "name=docker enabled=true"

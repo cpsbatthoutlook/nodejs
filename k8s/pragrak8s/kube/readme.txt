@@ -1,3 +1,6 @@
+##Vagrant download   
+https://download.virtualbox.org/virtualbox/6.1.2/VirtualBox-6.1-6.1.2_135662_el7-1.x86_64.rpm
+
 apt-get -y update && apt-get install -y apt-transport-https
 # Ensure iptables tooling does not use the nftables backend
 
