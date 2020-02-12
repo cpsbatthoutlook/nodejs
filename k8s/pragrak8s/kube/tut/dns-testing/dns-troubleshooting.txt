@@ -16,11 +16,14 @@ K8-DNS has 3 components: kube-dns, sidecar {4 healthchk}, dnsmasq
 
 Pods DNS policy :  Default {Local Node }, ClusterFirst {}, ClusterFirstWithHostNet
 
-#Check DNS configuration
+#Check DNS configuration & Svc is up
 nslookup kubernetes.default
 
 #Check if DNS pod is running, usually two running on master
-kc get pods -n kube-system -l k8s-app=kube-dns
+kc get pods,svc,deploy -n kube-system -l k8s-app=kube-dns
+
+#Are DNS endpoints exposed
+kc ge ep kube-dns -n kube-system
 
 #Check errors in the pod  {E Error, W Warning, F Failure}
 ## Append the logging level
