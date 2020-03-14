@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "gke-project-94570",
+  "private_key_id": "389189a4189ad19a801e5fe1a063d3e0dc655f39",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDHJxQKrayNLowA\nL7ujxnAi3QjCFuyi/tTkiwSztmXJWVzRwqyvGcTb1DsK9ZJgekuCQdKDiTdkRmvC\n3HRyLsLwVvqjJgC4+2kGyu8Z3bCwSWGjYWny4BEF5TBZ534Vys/3vxYIIneRKZzF\nr3oGDVwmd7Bk21KrWtAy4N9ITNP6IsY4FGh4pIUfoFYXEzwC6FD72Tct4WyXcVfy\n3DQe7TI0k+Sf/sKbX0AOCZk3Oz6V/+otlIH/Y68BoHd3lAKN09rrD0FHuwlWmDiF\nmNwT8zF0J/VGjSiUGxzMNKOVC0NeD0EgeTZQsl7sN4ok4elbFflGCjDNtuAmVIcK\nZD5cNxEFAgMBAAECggEACYM9QsBRImzuLNvFfvkYJfYrDa2kz9P+d8yIeja/bcAf\naKPqSzKJfnBIrLPrshY4Bp4Ib+uCkj8x37Is5r+t5JHcXCV7zy+FG1kKADvgYsny\niGhmCZRN2TCoIAHoeiKApLvDfI/Rkxpq0woteN4JADZjM4IYFLgcWJ3N/zOvmWjw\n+r2EP1/5EMqOMRY46QhyPK4Qjuhqw1nFJXEtjrYCNZuG+eD8QZd40vpYH0gSxM5m\nS1d4j1QDaC0vNXZ60IDR7pcaAdlqTlfchji2d7mUbI9rEFUDN08aEfI6QtinDUys\nCBIpphWaJeEA5DOG2r+YIm+dFAP0PgRBHjZCAC6t6QKBgQD4l7KNIwqb0Lf3qBf2\n4hNmhe5++tV2WjiBWyckfJ0PX2HTP0eP7U2sEuf43EF1kPNx3eYToZWNPj9w71UC\n4caZ81IGpi7KJc6R69usZzQjRmWe4U8HXwCCaFRLVxWw3exAT5s1pz8aDxsu8aXJ\nI8fboYSLIZpM46fCKBbMBT42PQKBgQDNFj7X0enTw+wnC1y5AfHkF4+c2ofVysxD\npaF5p61/z94RZiuv1dQL+yUUhJW5tbQGf0Eu9P5a4id7w08C6tbzlejBHNI+PhxV\nJkFreTHjGq8B2bIL5Du58iAu1DTj/Vrg3JKnOViJKCu6mSFkt4YkukZ1a14spQ+r\nOpQj4p06aQKBgDDtkpwK0JS4cO0SrZzPBGiCZd2iOw9vVH3JVhvtVvBmopd0df5T\nA52hnvyxRUUBgZjgxt8IR6okHVJ6GK5Xh8JXTMa4QK9S36SC2prFOVLUET5DNE3M\nGgqQxD6L5l4IX+6MfI0D3PyhCoWj1DCRlU2aLb9AnuERUbx6LXp8cbE1AoGBAJYj\nlPoWuKHJKtcioEzouZcMEJz59rty7bsQRHh1YrTRDneaXp0pY0UqJOkybxI3jYW8\nH5Iq1RLfwZv/TZaLKbXFp1HIsbnTapaDnRz66qSh4kDuiEPgYEEumpTt0ZKe5ar8\nj3hQqRowCGNgu2uqV1AH9pD7e0QfyqrGBbGHsycRAoGBALACEMk6qvZ9bRp/STm8\n+Vv3ED4oCM1eBxy1NBR5QzUTy80HI3YTU0H1wxIrI1XPAx4lgSRVfWiZdQrIiQ4p\nQ+csghCVpO+59f1T5NbQN4iWcjcQn4hx1HDc0udxAEF1pkGjMl1ly/eV7yce5Mtp\nCATeXgVsMDnfPJMRzBNlgK8z\n-----END PRIVATE KEY-----\n",
+  "client_email": "spinnaker-gcs-account-trial@gke-project-94570.iam.gserviceaccount.com",
+  "client_id": "104789741018186285934",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/spinnaker-gcs-account-trial%40gke-project-94570.iam.gserviceaccount.com"
+}

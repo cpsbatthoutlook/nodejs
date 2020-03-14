@@ -1,0 +1,29 @@
+gcloud init  ## define account, project, zone
+
+#https://cloud.google.com/kubernetes-engine/docs/how-to/creating-a-cluster#creating_a_cluster
+
+
+r=us-west3
+z=us-west3-b
+gke=gke-cluster-1
+gcloud config set project {}
+gcloud config set compute/zone $z
+gcloud config set compute/region $r
+#gcloud compute zones list [-uri]
+
+#Create  Single Zone cluster (other options, Regional/MultiZone/Private/Alpha/Windows )
+   #Also Cpu Memory intenstive and GPU accelerator  cluster configurations
+gcloud container clusters create gke-cluster-1 --zone $z [ --cluster-version v1 ]
+
+##Resize node
+gcloud container clusters $gke --num-nodes 1 
+
+#Delete
+gcloud container clusters delete gke-cluster-1
+
+##list
+gcloud container clusters lists
+
+
+##Get credentials
+gcloud container clusters get-credentials ${gke} --zone $z

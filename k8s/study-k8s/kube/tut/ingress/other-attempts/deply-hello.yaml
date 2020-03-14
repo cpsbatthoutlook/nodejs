@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    run: hello1
+  name: hello1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: hello1
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        run: hello1
+    spec:
+      containers:
+      - image: cpsbatthoutlook/nginx-hello1
+        name: hello1
+        ports:
+        - containerPort: 80
+        resources: {}

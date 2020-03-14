@@ -1,0 +1,17 @@
+$script = <<SCRIPT
+chmod 0600 /home/vagrant/.ssh/id_rsa
+usermod -a -G vagrant ubuntu
+cp -Rvf /home/vagrant/.ssh /home/ubuntu
+chown -Rvf ubuntu /home/ubuntu
+yum -y update
+yum -y install python-minimal python-apt ansible docker
+yum -y install screen curl wget sysstat tcpdump git
+SCRIPT
+Vagrant.configure("2") do |config|
+  config.vm.box = "geerlingguy/centos7"
+  config.vm.network "public_network"
+  config.vm.synced_folder "./kube", "/kube"
+   config.vm.provider "virtualbox" do |vb|
+     vb.memory = "4096"
+   end
+end

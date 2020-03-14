@@ -1,0 +1,19 @@
+https://cloud.google.com/sdk/docs/downloads-docker
+
+# https://hub.docker.com/r/google/cloud-sdk/
+
+#docker pull google/cloud-sdk:283.0.0-alpine
+#docker pull google/cloud-sdk:284.0.0-alpine
+
+docker pull google/cloud-sdk:284.0.0
+
+
+n=gcp-sdk
+i=google/cloud-sdk:284.0.0
+
+## Login
+docker run -ti --name $n $i gcloud auth login
+
+
+
+
