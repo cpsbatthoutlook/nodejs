@@ -27,6 +27,7 @@ kubectl create clusterrolebinding cluster-admin-binding --clusterrole cluster-ad
 
 
 ##Get the spinnaker tools
+export WKG_DIR=/workarea
 cd ${WKG_DIR}
 # If you're on Linux instead of OSX, use this URL instead:
 curl -L https://github.com/armory/spinnaker-tools/releases/download/0.0.6/spinnaker-tools-linux -o spinnaker-tools

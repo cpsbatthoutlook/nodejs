@@ -1,0 +1,23 @@
+https://cloud.google.com/sdk/docs/downloads-docker
+
+# https://hub.docker.com/r/google/cloud-sdk/
+
+#docker pull google/cloud-sdk:283.0.0-alpine
+#docker pull google/cloud-sdk:284.0.0-alpine
+
+docker pull google/cloud-sdk:284.0.0
+
+
+ng=gcp-sdk
+ig=google/cloud-sdk:284.0.0
+#Create directory folder to mount
+mkdir ${workarea}/$ng
+## Login
+docker run -ti --name $ng -v ${workarea}/${ng}:/workarea  $ig gcloud auth login
+
+##Bash completion
+gcloud beta interactive
+#source <(curl https://raw.githubusercontent.com/google-cloud-sdk/google-cloud-sdk/master/completion.bash.inc)
+
+
+

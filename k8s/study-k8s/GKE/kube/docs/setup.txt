@@ -1,6 +1,7 @@
 gcloud init  ## define account, project, zone
 
 #https://cloud.google.com/kubernetes-engine/docs/how-to/creating-a-cluster#creating_a_cluster
+## Tut ## https://medium.com/google-cloud/spinnaker-on-gcp-with-gke-edfa994652f7
 
 
 r=us-west3
